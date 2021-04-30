@@ -50,7 +50,7 @@ app.get("/url/sentiment", async (req, res) => {
         sentiment: {},
       },
     });
-    return res.send(response.result.sentiment.document);
+    return res.send(response.result.sentiment.document.label);
   } catch (err) {
     console.log("Failed to get sentiment:", err);
   }
@@ -78,7 +78,8 @@ app.get("/text/sentiment", async (req, res) => {
         sentiment: {},
       },
     });
-    return res.send(response.result.sentiment.document);
+    console.log(response.result.sentiment.document.label);
+    return res.send(response.result.sentiment.document.label);
   } catch (err) {
     console.log("Failed to get sentiment:", err);
   }
