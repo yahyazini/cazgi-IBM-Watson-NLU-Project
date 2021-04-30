@@ -130,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ideally this should be uncommented to prevent all the node_modules from getting checked into github
+#**node_modules/
